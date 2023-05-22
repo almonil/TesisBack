@@ -1,5 +1,6 @@
 package com.project.security.models;
 
+import com.project.security.security.models.Usuario;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -20,7 +21,7 @@ public class Candidato {
     private String cargo;
 
     @Column(name = "activo")
-    private Integer activo;
+    private Boolean activo;
 
     @ManyToOne
     @JoinColumn(name = "proceso_electoral_id")

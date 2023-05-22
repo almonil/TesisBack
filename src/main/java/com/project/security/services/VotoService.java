@@ -13,6 +13,6 @@ public class VotoService {
 
 
     public void guardarVotoEstudiante(Voto voto) {
-        votoRepository.saveVotoEstudiante(voto);
+        votoRepository.save(voto);
     }
 }

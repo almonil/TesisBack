@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface VotoRepository extends JpaRepository<Voto, Integer> {
 
-    void saveVotoEstudiante(Voto voto);
+
 
 }
 

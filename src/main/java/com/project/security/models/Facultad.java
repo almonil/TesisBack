@@ -1,5 +1,6 @@
 package com.project.security.models;
 
+import com.project.security.security.models.Usuario;
 import lombok.Data;
 
 import javax.persistence.*;
