@@ -14,19 +14,23 @@ public class Usuario {
 
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private int id;
+    @Column(name = "id")
+    private Integer id;
 
     @NotNull
+    @Column(name = "nombre")
     private String nombre;
     
     @NotNull
-    @Column (unique = true)
+    @Column(name = "nombre_usuario")
     private String nombreUsuario;
 
     @NotNull
+    @Column(name = "email")
     private String email;
 
     @NotNull
+    @Column(name = "password")
     private String password;
 
     @NotNull

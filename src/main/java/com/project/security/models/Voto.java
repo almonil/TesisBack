@@ -15,16 +15,16 @@ public class Voto {
     @Column(name = "id")
     private Integer id;
 
-    @ManyToOne
-    @JoinColumn(name = "estudiante_id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "estudiante_id", referencedColumnName = "id")
     private Usuario estudiante;
 
-    @ManyToOne
-    @JoinColumn(name = "proceso_electoral_id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "proceso_electoral_id", referencedColumnName = "id")
     private ProcesoElectoral procesoElectoral;
 
-    @ManyToOne
-    @JoinColumn(name = "candidato_id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "candidato_id", referencedColumnName = "id")
     private Candidato candidato;
 
     @Column(name = "activo")

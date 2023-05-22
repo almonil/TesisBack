@@ -11,6 +11,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "proceso_electoral")
 public class ProcesoElectoral {
+
     @Id
     @Column(name = "id")
     private Integer id;
@@ -18,5 +19,4 @@ public class ProcesoElectoral {
     @Column(name = "tipo_de_voto")
     private String tipoDeVoto;
 
-    // Getters y setters
 }

@@ -27,6 +27,5 @@ public class Candidato {
     @JoinColumn(name = "proceso_electoral_id")
     private ProcesoElectoral procesoElectoral;
 
-
 }
 
