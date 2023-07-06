@@ -70,6 +70,12 @@ public class AuthRest {
         if(nuevoUsuario.getRoles().contains("admin")) {
             roles.add(rolService.getByRolNombre(RolNombre.ROLE_ADMIN).get());
         }
+        if(nuevoUsuario.getRoles().contains("auditor")) {
+            roles.add(rolService.getByRolNombre(RolNombre.ROLE_AUDITOR).get());
+        }
+        if(nuevoUsuario.getRoles().contains("Jefe_area")) {
+            roles.add(rolService.getByRolNombre(RolNombre.ROLE_JEFE_AREA).get());
+        }
         usuario.setRoles(roles);
         usuarioService.save(usuario);
         return new ResponseEntity<>(new Mensaje("usuario guardado"), HttpStatus.CREATED);
@@ -79,7 +85,7 @@ public class AuthRest {
     @PostMapping ("/login")
     @CrossOrigin ("http://localhost:4200/login")
     public ResponseEntity<?> login (@Valid @RequestBody LoginUsuario loginUsuario, BindingResult bindingResult) {
-        JwtDto jwtDto = new JwtDto();
+        JwtDto jwtDto = new JwtDto("undefined","undefined",null);
         try {
             if(bindingResult.hasErrors()) {
                 return new ResponseEntity(new Mensaje("campos mal puestos"), HttpStatus.BAD_REQUEST);
@@ -97,3 +103,5 @@ public class AuthRest {
         return new ResponseEntity<>(jwtDto, HttpStatus.OK);
     }
 }
+
+

@@ -41,6 +41,10 @@ public class Inscripcion {
     @JoinColumn(name = "estudiante_id")
     private Usuario estudiante;
 
+    @ManyToOne
+    @JoinColumn(name = "proceso_electoral_id")
+    private ProcesoElectoral procesoElectoral;
+
     // Constructores, getters y setters, y otros métodos
 
     // Constructor vacío
@@ -68,7 +72,6 @@ public class Inscripcion {
     public void setId(Long id) {
         this.id = id;
     }
-
 
     // ...
 }

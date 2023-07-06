@@ -12,6 +12,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/procesos-electorales")
 @CrossOrigin(origins = "http://localhost:4200")
+
 public class ProcesoElectoralController {
     private final ProcesoElectoralRepository procesoElectoralRepository;
 
