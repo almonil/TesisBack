@@ -6,8 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface VotoRepository extends JpaRepository<Voto, Integer> {
-
-
-
+    boolean existsByNombreVotante(String nombreVotante);
 }
-

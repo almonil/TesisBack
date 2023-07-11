@@ -66,6 +66,8 @@ public class MainSecurity extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers("/auth/**").permitAll()
                 .antMatchers("/votos").permitAll()
+                .antMatchers("/inscripciones").permitAll()
+                .antMatchers("/procesos-electorales").permitAll()
                 .antMatchers(HttpMethod.OPTIONS).permitAll()
                 .anyRequest().authenticated()
                 .and()

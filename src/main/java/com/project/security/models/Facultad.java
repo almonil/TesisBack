@@ -1,6 +1,5 @@
 package com.project.security.models;
 
-import com.project.security.security.models.Usuario;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -28,9 +27,8 @@ public class Facultad {
     @Column(name = "ubicacion")
     private String ubicacion;
 
-    @ManyToOne
-    @JoinColumn(name = "decano_id")
-    private Usuario decano;
+    @JoinColumn(name = "nombre_decano")
+    private String decano;
 
     @Column(name = "activo")
     private Integer activo;

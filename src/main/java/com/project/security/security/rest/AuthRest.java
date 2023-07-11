@@ -79,7 +79,7 @@ public class AuthRest {
     @PostMapping ("/login")
     @CrossOrigin ("http://localhost:4200/login")
     public ResponseEntity<?> login (@Valid @RequestBody LoginUsuario loginUsuario, BindingResult bindingResult) {
-        JwtDto jwtDto = new JwtDto("undefined","undefined",null);
+        JwtDto jwtDto = new JwtDto();
         try {
             if(bindingResult.hasErrors()) {
                 return new ResponseEntity(new Mensaje("campos mal puestos"), HttpStatus.BAD_REQUEST);
