@@ -73,9 +73,14 @@ public class AuthRest {
         if(nuevoUsuario.getRoles().contains("auditor")) {
             roles.add(rolService.getByRolNombre(RolNombre.ROLE_AUDITOR).get());
         }
-        if(nuevoUsuario.getRoles().contains("Jefe_area")) {
+        if(nuevoUsuario.getRoles().contains("Director_AREA")) {
             roles.add(rolService.getByRolNombre(RolNombre.ROLE_JEFE_AREA).get());
         }
+        if(nuevoUsuario.getRoles().contains("GESTION_HUMANA")) {
+            roles.add(rolService.getByRolNombre(RolNombre.ROLE_GESTION_HUMANA).get());
+        }
+
+
         usuario.setRoles(roles);
         usuarioService.save(usuario);
         return new ResponseEntity<>(new Mensaje("usuario guardado"), HttpStatus.CREATED);

@@ -23,6 +23,10 @@ public class Voto {
     @JoinColumn(name = "inscripcion_id")
     private Inscripcion inscripcion;
 
+    @ManyToOne
+    @JoinColumn(name = "programa_academico")
+    private UsuarioProgramaAcademico  usuarioProgramaAcademico;
+
     // Constructores, getters y setters, y otros métodos
 
     // Constructor vacío
@@ -45,5 +49,12 @@ public class Voto {
         this.inscripcion = inscripcion;
     }
 
-    // ...
+    public UsuarioProgramaAcademico getUsuarioProgramaAcademico() {
+        return usuarioProgramaAcademico;
+    }
+
+    public void setUsuarioProgramaAcademico(UsuarioProgramaAcademico usuarioProgramaAcademico) {
+        this.usuarioProgramaAcademico = usuarioProgramaAcademico;
+    }
+// ...
 }

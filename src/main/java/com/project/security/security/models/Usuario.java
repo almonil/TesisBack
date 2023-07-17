@@ -34,10 +34,6 @@ public class Usuario {
     @Column(name = "password")
     private String password;
 
-    @NotEmpty
-    @Column(name = "programa_academico")
-    private String programaAcademico;
-
     @NotNull
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "rol_usuario", joinColumns = @JoinColumn(name = "usuario_id"),

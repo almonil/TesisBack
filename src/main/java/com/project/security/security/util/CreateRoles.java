@@ -19,11 +19,14 @@ public class CreateRoles implements CommandLineRunner {
         Rol rolUser = new Rol(RolNombre.ROLE_USER);
         Rol rolAuditor = new Rol(RolNombre.ROLE_AUDITOR);
         Rol rolJefeArea = new Rol(RolNombre.ROLE_JEFE_AREA);
+        Rol rolGestionHumana = new Rol(RolNombre.ROLE_GESTION_HUMANA);
+
 
         rolService.save(rolAdmin);
         rolService.save(rolUser);
         rolService.save(rolAuditor);
         rolService.save(rolJefeArea);
+        rolService.save(rolGestionHumana);
     }
 }
 
